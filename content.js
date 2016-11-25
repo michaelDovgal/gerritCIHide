@@ -1,0 +1,1 @@
+document.getElementsByClassName('test_result_table')[0].style.display='none';
