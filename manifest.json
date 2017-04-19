@@ -10,16 +10,13 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-        "contextMenus", 
-        "tabs",
-        "http://*/*",
-        "https://*/*"
+	  "*://review.openstack.org/*"
   ],
     "content_scripts": [
       {
-        "matches": ["https://*/*", "http://*/*"],
-        "js": ["jquery-3.1.1.min.js","content.js"],
-        "run_at": "document_end"
+        "matches": ["*://review.openstack.org/*"],
+        "js": ["content.js"],
+        "run_at": "document_start"
       }
-    ]
+  ]
 }
